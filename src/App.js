@@ -1,23 +1,15 @@
+import Board from './components/Board';
 import logo from './logo.svg';
-import './App.css';
 
-function App() {
+const App = () => {
+  document.title = "Battleship";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="boards-display">
+        <Board id="ai_board" caption="AI Board"></Board>
+        <Board id="player_board" caption="Your Board"></Board>
+      </div>
     </div>
   );
 }
